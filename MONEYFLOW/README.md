@@ -28,3 +28,13 @@ npm run dist
 
 ## Хранение и ограничения
 Данные хранятся локально в SQLite. Автоматические копии — в подпапке `backups` папки Electron `userData`. Обнаружение регулярных платежей — эвристика, не банковское подтверждение. Рекомендации информационные, не финансовая консультация.
+$nodePath = "C:\Program Files\nodejs"
+$userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+
+if (($userPath -split ";") -notcontains $nodePath) {
+    [Environment]::SetEnvironmentVariable(
+        "Path",
+        "$userPath;$nodePath".Trim(";"),
+        "User"
+    )
+}

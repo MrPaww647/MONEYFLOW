@@ -1,0 +1,12 @@
+node_modules/
+dist/
+release/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+backups/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
